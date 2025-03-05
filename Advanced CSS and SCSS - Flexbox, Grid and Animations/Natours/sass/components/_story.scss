@@ -52,7 +52,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: variables.$vertical-guter;
+    margin-bottom: variables.$vertical-gutter;
   }
 
   &:hover &__caption {

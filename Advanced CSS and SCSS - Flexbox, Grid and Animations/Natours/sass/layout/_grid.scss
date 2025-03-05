@@ -5,17 +5,35 @@
   max-width: variables.$grid-width;
   margin: 0 auto;
 
-  &:not(:last-child) {
-    margin-bottom: variables.$vertical-guter;
+  @include mixins.respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include mixins.clearfix();
+
+  &:not(:last-child) {
+    margin-bottom: variables.$vertical-gutter;
+
+    @include mixins.respond(tab-port) {
+      margin-bottom: variables.$vertical-gutter-small;
+    }
+  }
 
   [class^="col-"] {
     float: left;
 
     &:not(:last-child) {
       margin-right: variables.$horizontal-gutter;
+
+      @include mixins.respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: variables.$vertical-gutter-small;
+      }
+    }
+
+    @include mixins.respond(tab-port) {
+      width: 100% !important;
     }
   }
 
