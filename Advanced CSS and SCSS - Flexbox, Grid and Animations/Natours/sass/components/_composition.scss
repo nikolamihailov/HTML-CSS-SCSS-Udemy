@@ -1,4 +1,5 @@
 @use "../abstract/variables" as variables;
+@use "../abstract/mixins" as mixins;
 
 .composition {
   position: relative;
@@ -11,19 +12,41 @@
     z-index: 10;
     outline-offset: 2rem;
 
+    @include mixins.respond(tab-port) {
+      width: 33%;
+      position: relative;
+      float: left;
+      box-shadow: 0 1.5rem 3rem rgba(variables.$color-black, 0.4);
+    }
+
     &--p1 {
       left: 0;
       top: -2rem;
+
+      @include mixins.respond(tab-port) {
+        top: 0;
+      }
     }
 
     &--p2 {
       right: 0;
       top: 2rem;
+
+      @include mixins.respond(tab-port) {
+        top: 0;
+        transform: translateY(-10%) scale(1.1);
+        z-index: 999;
+      }
     }
 
     &--p3 {
       left: 20%;
       top: 10rem;
+
+      @include mixins.respond(tab-port) {
+        left: 0;
+        top: 0;
+      }
     }
 
     &:hover {

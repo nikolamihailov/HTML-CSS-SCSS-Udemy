@@ -1,4 +1,5 @@
 @use "../abstract/variables" as variables;
+@use "../abstract/mixins" as mixins;
 
 .feature-box {
   background-color: rgba(variables.$color-white, 0.8);
@@ -10,11 +11,19 @@
   box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.15);
   transition: transform 0.3s;
 
+  @include mixins.respond(tab-port) {
+    padding: 2rem;
+  }
+
   &__icon {
     height: 6rem;
     margin-bottom: 0.6rem;
     fill: variables.$color-primary-light;
     color: variables.$color-primary-dark;
+
+    @include mixins.respond(tab-port) {
+      margin-bottom: 0rem;
+    }
   }
 
   &:hover {
