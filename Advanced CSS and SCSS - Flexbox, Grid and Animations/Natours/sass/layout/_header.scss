@@ -9,7 +9,7 @@
       rgba(variables.$color-primary-light, 0.8),
       rgba(variables.$color-primary-dark, 0.8)
     ),
-    url("../img/hero.jpg");
+    image-set(url("../img/hero-small.jpg") 1x, url("../img/hero.jpg") 2x);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
