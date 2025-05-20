@@ -1,0 +1,5 @@
+@use "../base/base" as variables;
+
+.gallery {
+  background-color: variables.$color-grey-dark-1;
+}

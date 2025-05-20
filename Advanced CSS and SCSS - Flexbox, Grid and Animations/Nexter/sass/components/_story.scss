@@ -1,0 +1,11 @@
+@use "../base/base" as variables;
+
+.story {
+  &__pictures {
+    background-color: variables.$color-primary;
+  }
+
+  &__content {
+    background-color: variables.$color-grey-light-1;
+  }
+}

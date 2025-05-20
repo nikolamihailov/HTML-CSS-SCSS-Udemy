@@ -1,0 +1,5 @@
+@use "../base/base" as variables;
+
+.features {
+  background-color: variables.$color-grey-light-2;
+}

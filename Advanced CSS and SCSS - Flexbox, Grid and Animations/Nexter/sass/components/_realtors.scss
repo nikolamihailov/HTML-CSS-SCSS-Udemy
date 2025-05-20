@@ -1,0 +1,5 @@
+@use "../base/base" as variables;
+
+.realtors {
+  background-color: variables.$color-secondary;
+}
